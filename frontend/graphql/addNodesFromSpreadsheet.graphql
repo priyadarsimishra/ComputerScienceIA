@@ -1,0 +1,7 @@
+mutation AddNodesFromSpreadSheetMutation($course_id: ID!, $nodes: String!) {
+  addNodesFromSpreadSheet(course: $course_id, nodes: $nodes) {
+    name
+    courseCode
+    teacherID
+  }
+}

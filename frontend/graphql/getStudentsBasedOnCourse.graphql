@@ -1,0 +1,10 @@
+mutation GetStudentsBasedOnCourse($courseID: ID!) {
+  getStudentsBasedOnCourse(courseID: $courseID) {
+    id
+    username
+    email
+    profilePic
+    grade
+    school
+  }
+}

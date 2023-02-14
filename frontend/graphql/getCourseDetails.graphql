@@ -1,0 +1,46 @@
+query getCourseDetails($id: ID!) {
+  getCourse(id: $id) {
+    id
+    name
+    courseCode
+    courseLink
+    description
+    teacherID
+    numOfStudents
+    nodes {
+      name
+      type
+      description
+      id
+      course
+      status {
+        nodeID
+        studentID
+        state
+      }
+      resources {
+        resourceName
+        type
+        link
+      }
+      assignments {
+        name
+        type
+        questions {
+          question
+          answerChoices
+          answers
+          imagePicObj
+        }
+        studentScores {
+          nodeID
+          studentID
+          studentScore
+        }
+      }
+      parent
+      skills
+      positionID
+    }
+  }
+}

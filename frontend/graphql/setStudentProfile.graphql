@@ -1,0 +1,18 @@
+mutation SetStudentProfile(
+  $id: ID!
+  $profilePicUrl: String!
+  $grade: Int!
+  $school: String!
+) {
+  setStudentProfile(
+    id: $id
+    profilePicURL: $profilePicUrl
+    grade: $grade
+    school: $school
+  ) {
+    username
+    email
+    profilePic
+    school
+  }
+}

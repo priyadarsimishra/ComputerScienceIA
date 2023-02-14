@@ -1,0 +1,7 @@
+mutation UpdateNode($id: ID!, $newName: String!) {
+  updateNode(id: $id, newName: $newName) {
+    name
+    course
+    description
+  }
+}

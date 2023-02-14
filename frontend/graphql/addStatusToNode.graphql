@@ -1,0 +1,7 @@
+mutation AddStatusToNode($studentId: ID!, $nodeId: ID!, $state: String!) {
+  addStatusToNode(studentID: $studentId, nodeID: $nodeId, state: $state) {
+    nodeID
+    studentID
+    state
+  }
+}

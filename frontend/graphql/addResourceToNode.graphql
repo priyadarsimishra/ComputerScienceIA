@@ -1,0 +1,17 @@
+mutation AddResourceToNode(
+  $id: ID!
+  $resourceName: String!
+  $type: String!
+  $link: String!
+) {
+  addResourceToNode(
+    id: $id
+    resourceName: $resourceName
+    type: $type
+    link: $link
+  ) {
+    type
+    resourceName
+    link
+  }
+}

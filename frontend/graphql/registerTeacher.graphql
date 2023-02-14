@@ -1,0 +1,23 @@
+mutation registerTeacher(
+  $username: String!
+  $email: String!
+  $password: String!
+  $type: String!
+  $teacherCode: String!
+) {
+  registerTeacher(
+    registerTeacherInput: {
+      username: $username
+      email: $email
+      password: $password
+      type: $type
+      teacherCode: $teacherCode
+    }
+  ) {
+    userID
+    accessToken
+    refreshToken
+    type
+    tokenExpiration
+  }
+}

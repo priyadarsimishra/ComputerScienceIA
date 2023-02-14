@@ -1,0 +1,24 @@
+mutation registerStudent(
+  $username: String!
+  $email: String!
+  $password: String!
+  $type: String!
+  $authType: String!
+) {
+  registerStudent(
+    registerStudentInput: {
+      username: $username
+      email: $email
+      password: $password
+      type: $type
+      authType: $authType
+    }
+  ) {
+    userID
+    authType
+    accessToken
+    refreshToken
+    type
+    tokenExpiration
+  }
+}

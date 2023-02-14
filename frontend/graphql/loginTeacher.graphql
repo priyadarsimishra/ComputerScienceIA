@@ -1,0 +1,8 @@
+mutation LoginTeacher($email: String!, $password: String!) {
+  loginTeacher(email: $email, password: $password) {
+    userID
+    tokenExpiration
+    accessToken
+    refreshToken
+  }
+}

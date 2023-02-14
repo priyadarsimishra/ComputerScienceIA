@@ -1,0 +1,6 @@
+mutation DeleteMCQAssignment($id: ID!, $name: String!) {
+  deleteMCQAssignment(id: $id, name: $name) {
+    name
+    type
+  }
+}

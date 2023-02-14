@@ -1,0 +1,12 @@
+mutation SetTeacherProfile(
+  $id: ID!
+  $profilePicUrl: String!
+  $school: String!
+) {
+  setTeacherProfile(id: $id, profilePicURL: $profilePicUrl, school: $school) {
+    username
+    email
+    profilePic
+    school
+  }
+}

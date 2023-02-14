@@ -1,0 +1,19 @@
+query getStudentDetails($id: ID!) {
+  getStudent(id: $id) {
+    id
+    username
+    email
+    type
+    profilePic
+    grade
+    school
+    courses {
+      name
+      courseCode
+      description
+      courseLink
+      id
+      teacherID
+    }
+  }
+}

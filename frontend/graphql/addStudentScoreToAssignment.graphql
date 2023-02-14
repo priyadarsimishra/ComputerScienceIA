@@ -1,0 +1,17 @@
+mutation AddStudentScoreToAssignment(
+  $nodeID: ID!
+  $studentID: ID!
+  $studentScore: Float!
+  $nameOfAssignment: String!
+) {
+  addStudentScoreToAssignment(
+    nodeID: $nodeID
+    studentID: $studentID
+    studentScore: $studentScore
+    nameOfAssignment: $nameOfAssignment
+  ) {
+    nodeID
+    studentID
+    studentScore
+  }
+}

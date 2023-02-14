@@ -1,0 +1,21 @@
+mutation AddMCQAssignment(
+  $node: ID!
+  $name: String!
+  $type: String!
+  $questions: [InputMCQuestion]!
+) {
+  addMCQAssignment(
+    node: $node
+    name: $name
+    type: $type
+    questions: $questions
+  ) {
+    name
+    type
+    questions {
+      question
+      answerChoices
+      answers
+    }
+  }
+}

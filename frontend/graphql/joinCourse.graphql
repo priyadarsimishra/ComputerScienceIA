@@ -1,0 +1,14 @@
+mutation JoinCourse($id: ID!, $courseCode: String!) {
+  joinCourse(id: $id, courseCode: $courseCode) {
+    username
+    email
+    courses {
+      id
+      name
+      courseCode
+      courseLink
+      description
+      teacherID
+    }
+  }
+}

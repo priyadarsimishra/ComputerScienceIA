@@ -1,0 +1,3 @@
+mutation Mutation($positionID: String!, $course: ID!) {
+  deleteNode(positionID: $positionID, course: $course)
+}

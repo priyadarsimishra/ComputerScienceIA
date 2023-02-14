@@ -1,0 +1,37 @@
+mutation GetCoursesBasedOnID($id: ID!) {
+  getCoursesBasedOnID(id: $id) {
+    id
+    name
+    description
+    courseCode
+    courseLink
+    nodes {
+      name
+      description
+      id
+      parent
+      positionID
+      skills
+      status {
+        nodeID
+        studentID
+        state
+      }
+      resources {
+        resourceName
+        type
+        link
+      }
+      assignments {
+        name
+        studentScores {
+          nodeID
+          studentID
+          studentScore
+        }
+        # TODO: fix this query to include studentScores
+      }
+      type
+    }
+  }
+}

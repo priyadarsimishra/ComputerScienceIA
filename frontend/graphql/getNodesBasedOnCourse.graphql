@@ -1,0 +1,35 @@
+mutation getNodesBasedOnCourse($courseID: ID!) {
+  getNodesBasedOnCourse(courseID: $courseID) {
+    name
+    type
+    description
+    id
+    course
+    parent
+    status {
+      nodeID
+      studentID
+      state
+    }
+    resources {
+      resourceName
+      type
+      link
+    }
+    assignments {
+      name
+      type
+      questions {
+        question
+        answerChoices
+        answers
+        imagePicObj
+      }
+      studentScores {
+        nodeID
+        studentID
+        studentScore
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+mutation DeleteResourceFromNode($id: ID!, $resourceName: String!) {
+  deleteResourceFromNode(id: $id, resourceName: $resourceName) {
+    link
+    resourceName
+    type
+  }
+}

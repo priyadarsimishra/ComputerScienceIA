@@ -1,0 +1,8 @@
+mutation LoginStudent($email: String!, $password: String!) {
+  loginStudent(email: $email, password: $password) {
+    userID
+    tokenExpiration
+    accessToken
+    refreshToken
+  }
+}

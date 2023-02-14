@@ -1,0 +1,15 @@
+mutation GetTwoNodesInProgress($courseID: ID!, $studentID: ID!) {
+  getTwoNodesInProgress(courseID: $courseID, studentID: $studentID) {
+    id
+    name
+    description
+    parent
+    positionID
+    assignments {
+      studentScores {
+        studentID
+        studentScore
+      }
+    }
+  }
+}
